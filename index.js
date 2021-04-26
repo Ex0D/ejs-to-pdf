@@ -54,23 +54,24 @@ function convertIntoPDF(file , opt , output)
  */
 function ejsToPdf(ejsFile , data , output) 
 {
-    renderEjs(ejsFile , data).then((file) =>
-    {
-        
-        // Format Letter x phantomArgs to avoid the current vulnerability : Arbitrary File Read ► https://npmjs.com/advisories/1095
-        let opt = { format: "Letter" , phantomArgs: ["--local-url-access=false"] };
-
-        convertIntoPDF(file , opt , output).then((res) => 
+    return new Promise((resolve , reject) => {
+        renderEjs(ejsFile , data).then((file) =>
         {
-            console.log(res);
+            // Format Letter x phantomArgs to avoid the current vulnerability : Arbitrary File Read ► https://npmjs.com/advisories/1095
+            let opt = { format: "Letter" , phantomArgs: ["--local-url-access=false"] };
+    
+            resolve(convertIntoPDF(file , opt , output)).then((res) => 
+            {
+                console.log(res);
+            }).catch(err => 
+            {
+                reject(err);
+            });
         }).catch(err => 
         {
-            throw new Error(err);
+            reject(err);
         });
-    }).catch(err => 
-    {
-        throw new Error(err);
-    });
+    })
 }
 
 module.exports = { ejsToPdf: ejsToPdf };
