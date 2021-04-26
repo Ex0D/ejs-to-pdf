@@ -1,4 +1,4 @@
 const { ejsToPdf } = require('../index');
 let data           = require('./data.json');
 
-ejsToPdf("./template.ejs" , data , "./out.pdf");
+ejsToPdf(__dirname + "/template.ejs" , data , __dirname + "/out.pdf");
