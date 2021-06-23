@@ -2,8 +2,8 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Ex0D/ejs-to-pdf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ex0D/ejs-to-pdf/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Ex0D/ejs-to-pdf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ex0D/ejs-to-pdf/context:javascript)
 
-* Node version : 14.16.1
-* NPM version : 6.14.12
+* Node version used : 14.16.1
+* NPM version used : 6.14.12
 
 ## Install :
 
@@ -28,7 +28,7 @@ ejsToPdf("path_of_ejs_file.ejs" , data , "path_for_the_output_file.pdf");
 * [HTML-PDF](https://www.npmjs.com/package/html-pdf) - Convert HTML to PDF
 * FS (alias FileSystem by default on NodeJS)
 
-# WARNING :
+### WARNING :
 A vulnerability is detected on the html-pdf package ([Arbitrary File Read](https://npmjs.com/advisories/1095)), to avoid this, I use the phantomArgs option: 
 ```js
 ["--local-url-access=false"]
