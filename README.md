@@ -27,12 +27,3 @@ ejsToPdf("path_of_ejs_file.ejs" , data , "path_for_the_output_file.pdf");
 * [EJS](https://www.npmjs.com/package/ejs) - Embedded Javascript template x view engine
 * [HTML-PDF](https://www.npmjs.com/package/html-pdf) - Convert HTML to PDF
 * FS (alias FileSystem by default on NodeJS)
-
-### WARNING :
-A vulnerability is detected on the html-pdf package ([Arbitrary File Read](https://npmjs.com/advisories/1095)), to avoid this, I use the phantomArgs option: 
-```js
-["--local-url-access=false"]
-```
-as said on the html-pdf repo ([this issue exactly](https://github.com/marcbachmann/node-html-pdf/issues/530))
-
-In the html-pdf package, the argument is already defined by default but it is recommended to use an Object phantomArgs to pass it in the options when creating the PDF file
