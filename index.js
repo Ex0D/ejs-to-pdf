@@ -57,8 +57,8 @@ function ejsToPdf(ejsFile , data , output)
     return new Promise((resolve , reject) => {
         renderEjs(ejsFile , data).then((file) =>
         {
-            // Format Letter x phantomArgs to avoid the current vulnerability : Arbitrary File Read ► https://npmjs.com/advisories/1095
-            let opt = { format: "Letter" , phantomArgs: ["--local-url-access=false"] };
+            // Format Letter
+            let opt = { format: "Letter" };
     
             resolve(convertIntoPDF(file , opt , output)).then((res) => 
             {
