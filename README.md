@@ -1,3 +1,5 @@
+**THIS REPO IS DEPRECATED**
+
 # EJS to PDF
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Ex0D/ejs-to-pdf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ex0D/ejs-to-pdf/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Ex0D/ejs-to-pdf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ex0D/ejs-to-pdf/context:javascript)
