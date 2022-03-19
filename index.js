@@ -54,24 +54,25 @@ function convertIntoPDF(file , opt , output)
  */
 function ejsToPdf(ejsFile , data , output) 
 {
-    return new Promise((resolve , reject) => {
+    return new Promise((resolve , reject) => 
+    {
         renderEjs(ejsFile , data).then((file) =>
         {
-            // Format Letter
-            let opt = { format: "Letter" };
-    
-            resolve(convertIntoPDF(file , opt , output)).then((res) => 
+            resolve(convertIntoPDF(file , { format: "Letter"} , output))
+            .then((res) => 
             {
                 console.log(res);
-            }).catch(err => 
+            })
+            .catch(err => 
             {
                 reject(err);
             });
-        }).catch(err => 
+        })
+        .catch(err => 
         {
             reject(err);
         });
-    })
+    });
 }
 
 module.exports = { ejsToPdf: ejsToPdf };

@@ -1,18 +1,12 @@
-**THIS REPO IS DEPRECATED**
-
 # EJS to PDF
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Ex0D/ejs-to-pdf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ex0D/ejs-to-pdf/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Ex0D/ejs-to-pdf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ex0D/ejs-to-pdf/context:javascript)
 
-* Node version used : 14.16.1
-* NPM version used : 6.14.12
-
 ## Install :
 
 * 1 - Download this repo
-* 2 - Extract the index.js & package.json & package-lock.json (or copy the code and install the packages)
+* 2 - Extract the index.js & package.json & package-lock.json
 * 3 - Do an `npm i` in terminal
-* 4 - Done
 
 ## How to use :
 
