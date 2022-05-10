@@ -4,7 +4,7 @@
   "description": "convert ejs file to pdf file",
   "main": "index.js",
   "dependencies": {
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "html-pdf": "^3.0.1"
   },
   "scripts": {
